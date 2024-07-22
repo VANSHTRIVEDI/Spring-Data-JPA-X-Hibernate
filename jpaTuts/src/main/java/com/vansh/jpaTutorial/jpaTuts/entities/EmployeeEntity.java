@@ -34,7 +34,10 @@ public class EmployeeEntity {
 
 
     @ManyToOne(cascade = CascadeType.ALL)
+    //this is also a way to create a column in the same entity table
     //@JoinColumn(name = "worker's_department_id")
+
+    //this is also a way to create a new table(consist of id and reference)
     @JoinTable(name = "worker's_department_mapping")
     @JsonIgnore
     private  DepartmentEntity workerDepartment;
